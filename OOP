@@ -1,0 +1,342 @@
+//Lab 2 giraffe
+
+
+class Main {
+
+
+
+
+  public static void first_section(int head_len)
+
+  {
+
+
+    int num_spaces = 4;
+
+
+    //int head_len = 5;
+
+
+    int gap = 2*num_spaces;
+
+
+    for(int i =0;i<head_len;i++)
+
+    {
+
+
+      for(int j = 0; j< num_spaces; j++)
+
+      {
+
+
+        System.out.print(" ");
+
+      }
+
+
+      System.out.print("-");
+
+
+      for(int j = 0; j<2*i; j++) 
+
+      {
+
+
+        if(i==head_len-2 && j==2) //My "friend Gurav" helped me
+
+        {
+
+
+          System.out.print("- ");
+
+
+          continue;
+
+        }
+
+
+        System.out.print(" ");
+
+      }
+
+
+      if(i!=0) System.out.print("-");
+
+
+      System.out.print("\n");
+
+
+      num_spaces-=1;
+
+    }
+
+
+    for(int i = 0; i< gap+1; i++) 
+
+    {
+
+
+      if(i<=gap/2) System.out.print("- ");
+
+
+      else System.out.print(" ");
+
+    }
+
+
+    System.out.print(" -\n");
+
+
+    return;
+
+  }
+
+
+  public static void second_section(int neck_len)
+
+  {
+
+
+    int start = 9;
+
+
+    for(int i = 0;i<neck_len; i++)
+
+    {
+
+
+      for(int j =0; j<start; j++)
+
+      {
+
+
+        System.out.print(" ");
+
+      }
+
+
+      System.out.print("-");
+
+
+      for(int j =0; j<=start;j++) System.out.print(" ");
+
+
+      System.out.print("-\n");
+
+
+      start+=1;
+
+    }
+
+  }
+
+
+  public static void third_section(int body_len)
+
+  {
+
+
+    int start = 24;
+
+
+    int init_gap = 25;
+
+
+    for(int i = 0;i<body_len; i++)
+
+    {
+
+
+      for(int j =0; j<start; j++)
+
+      {
+
+
+        System.out.print(" ");
+
+      }
+
+
+      System.out.print("-");
+
+
+      for(int j =0; j<init_gap;j++) System.out.print(" ");
+
+
+      System.out.print("-\n");
+
+
+      start+=1;
+
+
+      init_gap+=5;
+
+    }
+
+
+    for(int i = 0; i<start+init_gap;i++)
+
+    {
+
+
+      if(i<start) System.out.print(" ");
+
+
+      else 
+
+      {
+
+
+        System.out.print("- ");
+
+        i++;
+
+      }
+
+    }
+
+
+    System.out.print("\n");
+
+  }
+
+
+  public static void fourth_section(int leg_len)
+
+  {
+
+
+    int leg_1 = 29;
+
+
+    int gap_1 = 1;
+
+
+    int leg_3 = 64;
+
+
+    int gap_2=1;
+
+
+    for(int i =0; i<leg_len; i++)
+
+    {
+
+
+      for(int j=0; j<leg_1; j++) System.out.print(" ");
+
+
+      System.out.print("-");
+
+
+      for(int j=0; j<gap_1; j++) System.out.print(" ");
+
+
+      System.out.print("-");
+
+
+      for(int j=0; j<leg_3-leg_1-gap_1; j++) System.out.print(" ");
+
+
+      System.out.print("-");
+
+
+      for(int j=0; j<gap_2; j++) System.out.print(" ");
+
+
+      System.out.print("-");
+
+
+      leg_1-=1;
+
+
+      gap_1+=2;
+
+
+      leg_3-=1;
+
+
+      gap_2+=2;
+
+
+      System.out.print("\n");
+
+    }
+
+  }
+
+
+ public static void main(String[] args) {
+
+
+  String initials = "FA"; // Initials
+
+
+  int age = 30; // Age 
+
+
+  // Length of different sections of the giraffe
+
+
+  int head_len = 5;
+
+
+  int neck_len = 15;
+
+
+  int body_len = 5;
+
+
+  int leg_len = 12;
+
+
+  // Methods to print different sections of the giraffe
+
+  first_section(head_len);
+
+  second_section(neck_len);
+
+  third_section(body_len);
+
+  fourth_section(leg_len);
+
+
+  // Total height
+
+
+  int total_len = head_len + neck_len + body_len + leg_len;
+
+
+  System.out.print("\n\n");
+
+
+  // Print the box at the bottom //= "My friend helped me"
+
+
+  for(int i =0; i<20; i++) System.out.print("-");
+
+
+  System.out.print("\n");
+
+
+  System.out.println("Initials: "+initials);
+
+
+  System.out.println("Age: "+Integer.toString(age));
+
+
+  System.out.println("Total height: "+Integer.toString(total_len));
+
+
+  for(int i =0; i<20; i++) System.out.print("-");
+
+
+  System.out.print("\n");
+
+
+
+
+ }
+
+}
